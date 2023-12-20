@@ -1,0 +1,28 @@
+.pageUser {
+  position: absolute;
+  top: 12%;
+  left: 10%;
+  font-size: 20px;
+  color: rgb(185, 170, 184);
+}
+.nameUser {
+  font-size: 30px;
+  color: rgb(135, 16, 123);
+}
+.albumUser {
+  margin-top: 6%;
+  font-size: 27px;
+  color: rgb(51, 49, 147);
+}
+.albumsUser {
+  font-size: 20px;
+  color: rgba(6, 23, 79, 0.871);
+  text-decoration: none;
+}
+.albumsUser :hover {
+  color: rgb(202, 105, 194);
+}
+.imgPhoto {
+  width: 15px;
+  height: 15px;
+}

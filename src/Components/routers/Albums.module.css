@@ -1,0 +1,14 @@
+.pageAlbums {
+  position: absolute;
+  top: 12%;
+  left: 10%;
+  font-size: 20px;
+  color: rgba(6, 23, 79, 0.871);
+}
+.pageAlbums :hover {
+  color: rgb(202, 105, 194);
+}
+.imgPhoto {
+  width: 15px;
+  height: 15px;
+}

@@ -1,0 +1,55 @@
+.headerLayout {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+}
+
+.link {
+  font-size: 35px;
+  text-decoration: none;
+}
+
+.linkInactive {
+  color: rgba(6, 23, 79, 0.871);
+}
+
+.linkActive {
+  color: rgb(51, 49, 147);
+}
+
+hr {
+  position: absolute;
+  border: 0;
+  clear: both;
+  width: 80%;
+  background-color: #000000;
+  height: 1.5px;
+  bottom: 45px;
+  left: 10%;
+  right: 10%;
+}
+
+.creater {
+  position: absolute;
+  bottom: 15px;
+  left: 11%;
+  font-size: 20px;
+  color: rgb(43, 11, 43);
+}
+
+.bsu {
+  position: absolute;
+  bottom: 15px;
+  right: 11%;
+  font-size: 20px;
+  color: rgb(43, 11, 31);
+}
+
+.footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 10%;
+  width: 100%;
+}

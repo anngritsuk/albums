@@ -1,7 +1,6 @@
 import { useCallback, Suspense } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
-import "./style.css";
-
+import styles from "./Users.module.css"
 export const loader = async () => {
   const users = await fetch(`https://jsonplaceholder.typicode.com/users`).then(
     (r) => r.json()
@@ -19,8 +18,8 @@ export default function Users() {
   const { users } = useLoaderData();
 
   return (
-    <Suspense fallback={<div className="page-user">Loading...</div>}>
-      <div className="page-users">
+    <Suspense fallback={<div className={styles.pageUser}>Loading...</div>}>
+      <div className={styles.pageUsers}>
         {users.map((user) => (
           <div key={user.id} onClick={goToUser(user.id)}>
             {user.name}

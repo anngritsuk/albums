@@ -1,39 +1,32 @@
 import { NavLink, Outlet } from "react-router-dom";
-import "./style.css";
+import styles from "./Layout.module.css";
 
 export default function Layout() {
   return (
-    <div>
-      <header
-        className="header-layout"
-        style={{ display: "flex", gap: "1rem" }}
-      >
+    <div className={styles.page}>
+      <header className={styles.headerLayout} >
         <NavLink
-          id="link"
           to="/albums"
-          className={({ isActive }) =>
-            isActive ? "link-active" : "link-inactive"
-          }
+          className={styles.link}
+          activeClassName={styles.linkActive}
         >
           Albums
         </NavLink>
         <NavLink
-          id="link"
           to="/users"
-          className={({ isActive }) =>
-            isActive ? "link-active" : "link-inactive"
-          }
+          className={styles.link}
+          activeClassName={styles.linkActive}
         >
           Users
         </NavLink>
       </header>
-      <main>
+      <main className={styles.main}>
         <Outlet />
       </main>
-      <footer className="footer">
+      <footer className={styles.footer}>
         <hr></hr>
-        <div className="creater">Created by: Gritsuk Anna</div>
-        <div className="bsu">BSU 2023</div>
+        <div className={styles.creater}>Created by: Gritsuk Anna</div>
+        <div className={styles.bsu}>BSU 2023</div>
       </footer>
     </div>
   );

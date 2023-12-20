@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { Await, useLoaderData, Link } from "react-router-dom";
-import "./style.css";
+import styles from "./Album.module.css"
 
 export const loader = ({ params: { id } }) => {
   const albumPromise = new Promise((r) => {
@@ -9,7 +9,7 @@ export const loader = ({ params: { id } }) => {
         `https://jsonplaceholder.typicode.com/albums/${id}`
       ).then((r) => r.json());
 
-      const getPhoto = await fetch(
+      const getPhoto  = await fetch(
         `https://jsonplaceholder.typicode.com/photos?albumId=${id}`
       ).then((r) => r.json());
 
@@ -32,26 +32,26 @@ export const loader = ({ params: { id } }) => {
   return { albumPromise };
 };
 
+
 export default function Album() {
   const { albumPromise } = useLoaderData();
 
   return (
-    <Suspense fallback={<div className="page-user">Loading...</div>}>
+    <Suspense fallback={<div className={styles.pageUser}>Loading...</div>}>
       <Await resolve={albumPromise}>
         {(albums) => {
           return (
-            <div className="page-album ">
-              <div className="album-name">{albums[0].title}</div>
+            <div className={styles.pageAlbum}>
+              <div className={styles.albumName}>{albums[0].title}</div>
               <div>
                 Created by:
-                <Link className="creator-name" to={`/users/${albums[2].id}`}>
+                <Link className={styles.creatorName} to={`/users/${albums[2].id}`}>
                   {albums[2].name}
                 </Link>
               </div>
-
               <div>
                 {albums[1].map((photo) => (
-                  <img className="photos" key={photo.id} src={photo.url} />
+                  <img className={styles.photos} key={photo.id} src={photo.url} />
                 ))}
               </div>
             </div>

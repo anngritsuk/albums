@@ -1,0 +1,30 @@
+.pageAlbum {
+  position: absolute;
+  top: 12%;
+  left: 8%;
+  font-size: 25px;
+  color: rgba(6, 23, 79, 0.871);
+}
+
+.albumName {
+  font-size: 30px;
+  color: rgba(6, 23, 79, 0.871);
+  text-decoration: none;
+}
+
+.creatorName {
+  font-size: 25px;
+  color: rgba(121, 25, 120, 0.996);
+  text-decoration: none;
+}
+
+.photos {
+  width: 120px;
+  height: 120px;
+  margin: 20px;
+  transition: 1s;
+}
+
+.photos:hover {
+  transform: scale(1.2);
+}

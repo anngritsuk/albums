@@ -1,4 +1,3 @@
-import "./Components/App.css";
 import Albums, { loader as albumsLoader } from "./Components/routers/Albums";
 import Album, { loader as albumLoader } from "./Components/routers/Album";
 import Users, { loader as usersLoader } from "./Components/routers/Users";

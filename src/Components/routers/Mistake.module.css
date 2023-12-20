@@ -1,0 +1,36 @@
+.pageError {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.firstLine {
+  text-align: center;
+  font-size: 67px;
+  color: rgb(51, 49, 147);
+}
+
+.secondLine {
+  text-align: center;
+  font-size: 45px;
+  color: rgb(51, 49, 147);
+}
+
+.thirdLine {
+  display: flex;
+  text-align: center;
+  font-size: 35px;
+  color: rgb(51, 49, 147);
+}
+
+.link {
+  font-size: 35px;
+  text-decoration: none;
+  color: rgb(51, 49, 147);
+  margin-left: 5px;
+}

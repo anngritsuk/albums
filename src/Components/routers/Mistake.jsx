@@ -1,14 +1,14 @@
 import { NavLink } from "react-router-dom";
-import "./style.css";
+import styles from "./Mistake.module.css"; 
 
 export default function Error() {
   return (
-    <div className="page-error">
-      <div className="first-line">404</div>
-      <div className="second-line">Страница не найдена</div>
-      <div className="third-line" style={{ display: "flex", gap: "1rem" }}>
+    <div className={styles.pageError}>
+      <div className={styles.firstLine}>404</div>
+      <div className={styles.secondLine}>Страница не найдена</div>
+      <div className={styles.thirdLine} style={{ display: "flex", gap: "1rem" }}>
         Перейти на страницу
-        <NavLink id="link" to="/users">
+        <NavLink className={styles.link} to="/users">
           Пользователи
         </NavLink>
       </div>
